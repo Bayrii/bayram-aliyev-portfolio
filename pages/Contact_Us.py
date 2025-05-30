@@ -13,6 +13,7 @@ with st.form(key="email_form", clear_on_submit=True):
     submit_button = st.form_submit_button("Send Message")
 
     if submit_button:
+
         message = f"""\
 Subject: Portfolio Contact Me - {user_email}
 
@@ -22,5 +23,4 @@ To: Portfolio Inbox
 {raw_message}
     """
         send_email(message)
-        st.session_state["email_sent"] = True
         st.success("✅ Your message has been sent successfully!")
