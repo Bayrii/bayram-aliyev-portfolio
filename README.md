@@ -1,4 +1,5 @@
 # 💡 Bayram Aliyev – Streamlit Portfolio
+🔗 **Live Demo**: [Click here to view the portfolio](https://bayramaliyev-portfolio.streamlit.app)
 
 Welcome to my interactive portfolio built with **Streamlit**! This web app showcases who I am, my educational background, selected projects, and includes a contact form that sends messages directly to my inbox via email.
 
