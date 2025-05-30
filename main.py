@@ -7,10 +7,8 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.image("images/photo.png",)
-
-
 with col2:
-    st.title("Bayram Aliyev")
+    st.title("💡 Bayram Aliyev")
 
     about_me = """
     I'm a highly motivated second-year Computer Science student with a deep interest in **mathematics**, **programming**, and **data-driven problem solving**.  
@@ -24,16 +22,23 @@ with col2:
     st.info(about_me)
 
     st.header("📚 Education")
-    st.write("""
+    st.info("""
     - **BSc in Computer Science**, French-Azerbaijan University  
       _2023 - ongoing_
     - **GPA:**  3.7
     """)
-    st.markdown("""
-    **💼 Projects**  
-    Take a look at some of the projects I’ve built.  
-    *📫 Feel free to reach out if you'd like to connect or collaborate!*
-    """)
+
+st.markdown("""
+<div style="text-align: center; padding: 10px 0;">
+    <h2 style="margin-bottom: 0;">💼 Projects</h2>
+    <p style="font-size: 18px; margin-top: 5px;">
+        Take a look at some of the projects I’ve built.
+    </p>
+    <p style="font-size: 16px; color: gray;">
+        📫 Feel free to reach out if you'd like to connect or collaborate!
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
 
