@@ -1,18 +1,13 @@
 import streamlit as st
+import pandas as pd
 
-st.set_page_config(layout="centered")
+st.set_page_config(layout="wide")
 
 col1, col2 = st.columns(2)
 
 with col1:
     st.image("images/photo.png",)
 
-    st.header("📚 Education")
-    st.write("""
-    - **BSc in Computer Science**, French-Azerbaijan University  
-      _2023 - ongoing_
-    - **GPA:**  3.7
-    """)
 
 with col2:
     st.title("Bayram Aliyev")
@@ -28,9 +23,34 @@ with col2:
 
     st.info(about_me)
 
-st.markdown("""
-**💼 Projects**  
-Take a look at some of the projects I’ve built.  
-*📫 Feel free to reach out if you'd like to connect or collaborate!*
-""")
+    st.header("📚 Education")
+    st.write("""
+    - **BSc in Computer Science**, French-Azerbaijan University  
+      _2023 - ongoing_
+    - **GPA:**  3.7
+    """)
+    st.markdown("""
+    **💼 Projects**  
+    Take a look at some of the projects I’ve built.  
+    *📫 Feel free to reach out if you'd like to connect or collaborate!*
+    """)
+
+col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
+
+data = pd.read_csv("data.csv", sep = ";")
+with col3:
+    for index, row in data[:2].iterrows():
+        st.header(row["title"])
+        st.write(row["description"])
+        st.image("images/" + row["image"])
+        st.write(f"[Source Code]({row["url"]})")
+
+
+with col4:
+    for index, row in data[2:].iterrows():
+        st.header(row["title"])
+        st.write(row["description"])
+        st.image("images/" + row["image"])
+        st.write(f"[Source Code]({row["url"]})")
+
 
