@@ -28,6 +28,7 @@ with col2:
     - **GPA:**  3.7
     """)
 
+
 st.markdown("""
 <div style="text-align: center; padding: 10px 0;">
     <h2 style="margin-bottom: 0;">💼 Projects</h2>
@@ -39,6 +40,7 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
 col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
 
