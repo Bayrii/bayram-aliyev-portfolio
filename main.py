@@ -28,4 +28,9 @@ with col2:
 
     st.info(about_me)
 
+st.markdown("""
+**💼 Projects**  
+Take a look at some of the projects I’ve built.  
+*📫 Feel free to reach out if you'd like to connect or collaborate!*
+""")
 
